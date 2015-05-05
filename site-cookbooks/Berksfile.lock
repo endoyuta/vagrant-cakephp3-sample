@@ -1,0 +1,13 @@
+DEPENDENCIES
+  mysql
+
+GRAPH
+  mysql (6.0.21)
+    smf (>= 0.0.0)
+    yum-mysql-community (>= 0.0.0)
+  rbac (1.0.3)
+  smf (2.2.6)
+    rbac (>= 1.0.1)
+  yum (3.6.0)
+  yum-mysql-community (0.1.17)
+    yum (>= 3.0)

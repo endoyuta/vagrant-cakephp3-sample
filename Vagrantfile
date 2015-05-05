@@ -18,8 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./site-cookbooks"
     chef.add_recipe "base"
-    chef.add_recipe "mysql56"
     chef.add_recipe "php55"
+    chef.add_recipe "mysql"
 
     chef.json = {
       httpd: {
@@ -30,7 +30,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         timezone: "Asia/Tokyo"
       },
       mysql: {
-        password: ''
       },
     }
   end
